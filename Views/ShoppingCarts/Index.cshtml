@@ -1,0 +1,65 @@
+﻿@model EShop.Domain.DTO.ShoppingCartDto
+
+@{ 
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+
+    <div class="row m-4 ">
+        <a asp-controller="ShoppingCarts"  asp-action="Order" class="btn btn-info">Order Now</a>
+    </div>
+
+        <div class="row m-4 ">
+
+
+            <table class="table">
+                <thead style="background-color: #e667c1; color:white;">
+                    <tr>
+                        <th scope="col"> </th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">ProductPrice</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @if (Model.Products.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="5"><b>No active products</b></td>
+                        </tr>
+                    }
+                    else
+                    {
+                        @for (int i = 0; i < Model.Products.Count; i++)
+                        {
+                            var item = Model.Products[i];
+
+                            <tr style="color:#17A2B8 ";>
+                                <th scope="row">@(i + 1)</th>
+                                <td><b>@item.CurrnetProduct.ProductName</b></td>
+                                <td><b>@item.Quantity</b></td>
+                                <td><b>$@item.CurrnetProduct.ProductPrice</b></td>
+                                <th><a asp-controller="ShoppingCarts" asp-action="DeleteFromShoppingCart" asp-route-id="@item.ProductId" class="btn" style="color: white; background-color: #6ac1d9;" text-center">Delete from shopping cart</a></th>
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+
+                <tfoot style="background-color: #e667c1; color:white;">
+                    <tr>
+                        <th scope="col">Total price:</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">@Model.TotalPrice</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </div>
+    </div>

@@ -1,0 +1,74 @@
+﻿@model EShop.Domain.DomainModels.Product
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #grad {
+        background-image: linear-gradient(#8CD0E3, #F08DCE);
+    }
+
+    #grad3 {
+        background-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+        border-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+        border-radius: 4px;
+    }
+</style>
+
+<div class="row" id="grad" style=" height: 929px; margin-top: -62px; width: 1541px; margin-left: -210px; margin-right: -210px;">
+    <div class="col-lg-8" style=" background-color: white; width: 500px; margin-left: 208px; margin-top: 90px; }">
+        <h1 style="color: #378aa3; font-weight: bold; ">Edit product</h1>
+
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group" style="color: #378aa3; font-weight: bold; ">
+                        <label asp-for="ProductName" class="control-label"></label>
+                        <input asp-for="ProductName" class="form-control" />
+                        <span asp-validation-for="ProductName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="color: #378aa3; font-weight: bold; ">
+                        <label asp-for="ProductImage" class="control-label"></label>
+                        <input asp-for="ProductImage" class="form-control" />
+                        <span asp-validation-for="ProductImage" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="color: #378aa3; font-weight: bold; ">
+                        <label asp-for="ProductDescription" class="control-label"></label>
+                        <input asp-for="ProductDescription" class="form-control" />
+                        <span asp-validation-for="ProductDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="color: #378aa3; font-weight: bold; ">
+                        <label asp-for="ProductPrice" class="control-label"></label>
+                        <input asp-for="ProductPrice" class="form-control" />
+                        <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="color: #378aa3; font-weight: bold; ">
+                        <label asp-for="Rating" class="control-label"></label>
+                        <input asp-for="Rating" class="form-control" />
+                        <span asp-validation-for="Rating" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="grad3" value="Save" class="btn btn-primary" />
+                    </div>
+
+
+
+                    <div>
+                        <a asp-action="IndexAdmin" style="color: #378aa3; ">Back to List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

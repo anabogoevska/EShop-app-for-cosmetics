@@ -1,0 +1,147 @@
+﻿@model EShop.Domain.DomainModels.Product
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*
+    <h1>Details</h1>
+
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.ProductImage)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ProductImage)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ProductDescription)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ProductPrice)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Rating)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+*@
+
+<div>
+
+    <hr />
+
+
+    <div class="col" style="">
+        <img src="@Model.ProductImage" class="card-img-top" style="margin-left: -90px; height: 400px; width: 400px;">
+    </div>
+
+    <div class="col" style="margin-left: 350px; margin-top: -355px;">
+
+        <h2><b> @Html.DisplayFor(model => model.ProductName)</b>  </h2>
+
+
+
+
+        <dd>
+            <p style="font-size: 17px; margin-right: 25px;"><i> @Html.DisplayFor(model => model.ProductDescription)</i></p>
+
+        </dd>
+
+
+
+
+        @{
+
+
+            if (Model.Rating == 5)
+            {
+
+                <img src="https://static.thenounproject.com/png/1143722-200.png" width="200px" height="188px" style="margin-top: -44px; margin-left: -12px;">
+
+            }
+
+            if (Model.Rating == 4)
+            {
+
+                <img src="https://static.thenounproject.com/png/1149720-200.png" width="160px" height="148px" style="margin-top: -44px; margin-left: -12px;">
+
+            }
+
+            if (Model.Rating == 3)
+            {
+
+
+                <img src="https://static.thenounproject.com/png/1149721-200.png" width="180px" height="168px" style="margin-top: -44px; margin-left: -12px;">
+
+            }
+
+            if (Model.Rating == 2)
+            {
+
+                <img src="https://static.thenounproject.com/png/2554122-200.png" width="120px" height="118px" style="margin-top: -44px; margin-left: -8px;">
+
+            }
+
+            if (Model.Rating == 1)
+            {
+
+                <img src="https://static.thenounproject.com/png/2155113-200.png" width="160px" height="148px" style="margin-top: -44px; margin-left: -12px;" />
+
+            }
+        }
+
+        <div style="margin-top: -30px;">
+            <dd>
+                <h4><b>$@Html.DisplayFor(model => model.ProductPrice)</b></h4>
+            </dd>
+
+            <dd>
+                <h4><b>@Html.DisplayFor(model => model.ProductQuantity) g</b></h4>
+
+            </dd>
+
+            <dd>
+
+                <a class="btn btn-info text-center" style="height: 45px; width: 190px;  margin-top: 49px;  border-radius: 0px; background-color: #F5EA77; border-color: #F5EA77; ">
+                    <h5 style="margin-left: -35px; font-size: 17px; margin-left: -4px; margin-top: 4px;"> </h5>
+
+                </a>
+
+                <a asp-controller="Products" asp-action="AddProductToCard" asp-route-id="@Model.Id" class="btn btn-info text-center" style="height: 45px; width: 190px; margin-left: -203px; margin-top: 32px; border-radius: 0px; background-color: #6BCFDF; border-color: #6BCFDF;">
+                    <h5 style="margin-left: -35px; font-size: 17px; margin-left: -4px; margin-top: 4px;"> Add to card $@Model.ProductPrice</h5>
+                </a>
+
+            </dd>
+        </div>
+    </div>
+</div>
+
+
+@*<p style="margin-left: 350px;">
+        @Html.ActionLink("Add to Cart", "OrderNow", "ShoppingCart", new { id = Model.ProductID }, null)
+    </p> *@
+
+

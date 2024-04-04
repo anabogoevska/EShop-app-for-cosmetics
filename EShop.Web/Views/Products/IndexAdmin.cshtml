@@ -1,0 +1,67 @@
+﻿@model List<EShop.Domain.DomainModels.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    #grad {
+        background-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+    }
+
+    #grad {
+        border-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+        border-radius: 4px;
+    }
+</style>
+
+<div class="container" style="margin-left: 170px;">
+    <div class="row" style=" margin-left: 24px;">
+        <a id="grad" class="btn btn-success" asp-action="Create">Insert New Product</a>
+    </div>
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+
+        if (i % 3 == 0)
+        {
+            @:<div class="row">
+            }
+
+            <div class="col-md-3 m-4">
+                <div class="card" style="height: 400px; width: 290px; ">
+                    <div style="width: 16rem; height: 21rem;">
+                        <img class="card-img-top" src="@item.ProductImage" style="height: 80%; width:287px;" alt="Image for product!">
+
+                        <div class="card-body">
+
+                            <div style="margin-left: 47px; margin-top: -15px; ">
+                                <a asp-controller="Products" asp-action="DetailsAdmin" asp-route-id="@item.Id" style="height: 45px; width: 190px; margin-left: 47px; margin-top: -89px; margin-left: 49px; border-radius: 4px; background-color: white; color:black; ">
+                                    <h5 class="text-center"> @item.ProductName</h5>
+
+                                </a>
+                            </div>
+
+                          
+
+
+                            <h6 class="text-center" style="margin-top: -5px; margin-left: 44px; ">@item.ProductQuantity ml</h6>
+                        </div>
+                    </div>
+
+                    <div>
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            if (i % 3 == 2)
+            {
+            @:</div>
+        }
+    }
+</div>

@@ -1,0 +1,12 @@
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.csproj.AssemblyReference.cache
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.AssemblyInfoInputs.cache
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.AssemblyInfo.cs
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\bin\Debug\netcoreapp3.1\EShop.Repository.deps.json
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\bin\Debug\netcoreapp3.1\EShop.Repository.dll
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\bin\Debug\netcoreapp3.1\EShop.Repository.pdb
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\bin\Debug\netcoreapp3.1\EShop.Domain.dll
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\bin\Debug\netcoreapp3.1\EShop.Domain.pdb
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.csproj.CopyComplete
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.dll
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Repository\obj\Debug\netcoreapp3.1\EShop.Repository.pdb

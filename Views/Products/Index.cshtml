@@ -1,0 +1,79 @@
+﻿@model List<EShop.Domain.DomainModels.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ 
+<style>
+    #grad {
+        background-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+    }
+    #grad {
+        border-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+        border-radius: 4px;
+    }
+
+</style>
+
+<div class="container" style="margin-left: 170px;">
+   
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+
+        if (i % 3 == 0)
+        {
+            @:<div class="row">
+            }
+
+            <div class="col-md-3 m-4">
+                <div class="card" style="height: 440px; width: 290px; ">
+                    <div style="width: 16rem; height: 21rem;">
+                        <img class="card-img-top" src="@item.ProductImage" style="height: 80%; width:287px;" alt="Image for product!">
+
+                        <div class="card-body">
+
+                            <div style="margin-left: 47px; margin-top: -15px; ">
+                                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.Id" style="height: 45px; width: 190px; margin-left: 47px; margin-top: -89px; margin-left: 49px; border-radius: 4px; background-color: white; color:black; ">
+                                    <h5 class="text-center"> @item.ProductName</h5>
+
+                                </a>
+                            </div>
+                        
+                          
+
+
+                            <h6 class="text-center" style="margin-top: -5px; margin-left: 44px; ">@item.ProductQuantity g</h6>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+
+
+                            <a class="btn btn-info text-center" style="height: 45px; width: 190px; margin-left: 47px; margin-top: 49px; margin-left: 55px; border-radius: 4px; background-color: #F5EA77; border-color: #F5EA77; ">
+                                <h5 style="margin-left: -35px; font-size: 17px; margin-left: -4px; margin-top: 4px;"> </h5>
+
+                            </a>
+
+
+                            <a asp-controller="Products" asp-action="AddProductToCard" asp-route-id="@item.Id" class="btn btn-info text-center" style="height: 45px; width: 190px; margin-left: 47px; margin-top: -89px; margin-left: 49px; border-radius: 4px; background-color: #6BCFDF; border-color: #6BCFDF; ">
+                                <h5 style="margin-left: -35px; font-size: 17px; margin-left: -4px; margin-top: 4px;"> Add to card $@item.ProductPrice</h5>
+
+                            </a>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+            if (i % 3 == 2)
+            {
+            @:</div>
+        }
+    }
+</div>

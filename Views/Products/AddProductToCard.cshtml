@@ -1,0 +1,83 @@
+﻿@model EShop.Domain.DTO.AddToShoppingCartDto
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    #grad {
+        background-image: linear-gradient(#8CD0E3, #F08DCE);
+    }
+
+    #grad3 {
+        background-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+        border-image: linear-gradient(to right, #22A0C0, #FF9AB0);
+        border-radius: 4px;
+    }
+</style>
+@*
+    <div class="container" id="grad" >
+        <div class="row" style=" height: 929px; margin-top: -62px; width: 1541px; margin-left: -210px; margin-right: -210px;">
+            <div class="col-lg-8" style=" background-color: white; width: 500px; margin-left: 208px; margin-top: 90px; }">
+                <div class="col-md-4 m-auto">
+                    <form asp-action="AddProductToCard" method="post">
+                        <input type="hidden" asp-for="ProductId" />
+                        <div class="form-group">
+                            <label asp-for="SelectedProduct.ProductName"></label>
+                            <input disabled asp-for="SelectedProduct.ProductName" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Quantity"></label>
+                            <input asp-for="Quantity" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <input id="grad3" type="submit" value="Save" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+*@
+@**@
+<div class="row" id="grad" style=" height: 929px; margin-top: -62px; width: 1541px; margin-left: -210px; margin-right: -210px;">
+    <div class="col-lg-8" style=" background-color: white; width: 500px; margin-left: 208px; margin-top: 90px; }">
+        <h1 style="color: #378aa3; font-weight: bold; " class="text-center">Add selected product in shopping cart</h1>
+
+
+        <hr />
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 200px; margin-top: 59px; ">
+                <form asp-action="AddProductToCard" method="post">
+                    <input type="hidden" asp-for="ProductId" />
+                    <div class="form-group">
+                        <label asp-for="SelectedProduct.ProductName" style="color: #378aa3; font-weight: bold; "></label>
+                        <input disabled asp-for="SelectedProduct.ProductName" class="form-control" />
+                    </div>
+
+                    <div class="form-group" style="color: #378aa3; font-weight: bold; ">
+                        <label asp-for="Quantity"></label>
+                        <input asp-for="Quantity" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <input id="grad3" type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+       
+        <img src=" https://img.freepik.com/premium-vector/pink-shopping-cart-semi-flat-color-vector-object_151150-9713.jpg?w=2000" style="width: 270px; vertical-align: middle; border-style: none; margin-left: 580px; margin-top: -290px; ">
+    
+    </div>
+</div>
+
+
+
+

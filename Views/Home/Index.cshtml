@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    #grad {
+        background-image: linear-gradient(to right, #D992B8,#D1AFAD);
+    }
+
+    .image-container {
+        position: relative; /* set container to a relative position */
+        /* set your desired height */
+        margin-top: 44px;
+        margin-left: -50px;
+    }
+
+    #button1 {
+        z-index: 2;
+        position: absolute;
+    }
+</style>
+
+<div id="grad" class="container" >
+
+       
+        <div class="image-container">
+            <img src="https://www.victoriassecret.com/images/vsweb/0fcb4945-8335-4b0b-a567-6a0b9a842c40/01_022323_PINK_Beauty_5x2.jpg" style=" width: 1600px; margin-bottom: -82px; margin-top: -45px; margin-left: -190px; height: 690px;">
+            <a class="nav-link " id="button1" style=" margin-top: -5px; color: white; background-color: #32b7db; margin-left: 550px; border-radius: 10px; " asp-area="" asp-controller="Products" asp-action="Index"><b>SHOP NOW</b></a>
+  
+    
+    </div>
+
+</div>

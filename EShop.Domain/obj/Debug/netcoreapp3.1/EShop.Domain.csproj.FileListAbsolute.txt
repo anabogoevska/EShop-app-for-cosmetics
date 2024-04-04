@@ -1,0 +1,9 @@
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\bin\Debug\netcoreapp3.1\EShop.Domain.deps.json
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\bin\Debug\netcoreapp3.1\EShop.Domain.dll
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\bin\Debug\netcoreapp3.1\EShop.Domain.pdb
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\obj\Debug\netcoreapp3.1\EShop.Domain.csproj.AssemblyReference.cache
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\obj\Debug\netcoreapp3.1\EShop.Domain.AssemblyInfoInputs.cache
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\obj\Debug\netcoreapp3.1\EShop.Domain.AssemblyInfo.cs
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\obj\Debug\netcoreapp3.1\EShop.Domain.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\obj\Debug\netcoreapp3.1\EShop.Domain.dll
+C:\Users\USER\OneDrive\Desktop\EShopApplication\EShopApplication\EShop.Domain\obj\Debug\netcoreapp3.1\EShop.Domain.pdb
